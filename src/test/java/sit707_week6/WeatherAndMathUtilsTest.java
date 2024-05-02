@@ -71,4 +71,12 @@ public class WeatherAndMathUtilsTest {
 	public void testTrueTotalOddNumsInRange() {
 		Assert.assertEquals(3,WeatherAndMathUtils.totalOddNumsInRange(1,5));
 	}
+	
+    @Test(expected = IllegalArgumentException.class)
+    public void testIllegalArgumentException() {
+    	String a = WeatherAndMathUtils.weatherAdvice(-1, 0.0);
+    	Assert.assertTrue(true);
+    }
+    
+    
 }
